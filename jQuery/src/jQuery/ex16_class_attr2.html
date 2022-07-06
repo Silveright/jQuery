@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<style>
+	.high-light-0{background:yellow;}
+	.high-light-1{background: orange;}
+	.high-light-2{background: blue;}
+	.high-light-3{background: green;}
+	.high-light-4{background: red;}
+</style>
+<script>
+	/* 
+		attr()메서드 : 문서객체에 속성을 추가하는 메서드
+		removeAttr()메서드: 문서객체에 속성을 제거하는 메서드
+			*/
+	
+	$(document).ready(function(){
+		$('h1').each(function(index,item){
+			$(this).addClass('high-light-'+index);
+			
+		});
+		
+		/* $('h1:eq(0)').attr('class', 'high-light-0');
+		$('h1:eq(1)').attr('class', 'high-light-1');
+		$('h1:eq(2)').attr('class', 'high-light-2');
+		$('h1:eq(3)').attr('class', 'high-light-3');
+		$('h1:eq(4)').attr('class', 'high-light-4'); */
+	});
+</script>
+</head>
+<body>
+		<h1>item - 0</h1>
+		<h1>item - 1</h1>
+		<h1>item - 2</h1>
+		<h1>item - 3</h1>
+		<h1>item - 4</h1>
+</body>
+</html>

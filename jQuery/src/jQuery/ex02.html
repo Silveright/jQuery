@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 작성 안하는 경우 ex01.html:18 Uncaught ReferenceError: jQuery is not defined -->
+<script>/*실행할 별도의 스크립트 하나 더 작성 */
+/* 
+	간단한 형식의 $(document).ready()
+	작성법 : $(function(){
+		...code
+	});
+		   
+*/
+	jQuery(document).ready(function(){
+		console.log("hello jQuery");
+	});
+	
+	$(function(){
+		console.log("간단한 형식: hello $");
+	});
+</script>
+
+</head>
+<body>
+</body>
+</html>

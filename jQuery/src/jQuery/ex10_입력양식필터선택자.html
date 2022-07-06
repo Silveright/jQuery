@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!--
+	jQuery 입력 양식 필터 선택자(1):
+	input태그의 type 속성에 따라 문서 객체를 선택할 수 있다.
+	속성 선택자 input[type='text']와 같은 의미로 input:text 사용한다.
+	 1)요소: text(input 태그 중 type 속성이 tetx인 문서 객체를 선택)
+	 2)요소: submit(input 태그 중 type 속성이 submit인 문서 객체를 선택)
+	 3)요소: reset(input 태그 중 type 속성이 reset인 문서 객체를 선택)
+-->
+<script>
+	$(document).ready(function(){
+		console.log($("input:text").val())
+		$("input:text").val('Hello jQuery');
+		console.log($("input:text").val())
+
+		$("input:password").css('color','red');
+	})
+</script>
+
+</head>
+<body>
+	<input type='text' value='저요' name='name'><br>
+	<input type='password' name='pwd'><br>
+</body>
+</html>

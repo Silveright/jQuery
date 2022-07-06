@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!--
+	선택한 객체에 대해 메서드를 연속적으로 사용할 수 있는 기법을 체이닝 기법이라고 한다.
+-->
+<script>
+	$(document).ready(function(){
+		var input= prompt('이름을 입력하세요')
+		/*
+		$("input:text").css('color','green'); 
+		$("input:text").css('background','orange'); 
+		$("input:text").css('height','50px'); 
+		$("input:text").css('font-size','50px'); 
+		*/
+
+		/*
+		$("input:text").css('color','green'); 
+					   .css('background','orange'); 
+					   .css('height','50px'); 
+					   .css('font-size','50px'); 
+		*/
+		$("input:text").val(input);
+		
+		$("input:text").css({"background-color":"orange", 
+							"font-size":"50px", 
+							"color":"green", 
+							"height":"50px"});
+	})
+</script>
+
+</head>
+<body>
+	 <input type="text" placeholder="이름">    
+</body>
+</html>

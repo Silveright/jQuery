@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<style>
+li{
+	height:50px; list-style:none; font-size:20px; line-height:50px;
+	}
+</style>
+<script>
+	/* 
+		위치 필터 선택자: 위치와 관련된 필터 선택자
+			요소: eq(n) 선택한 요소의 인덱스 번호에 해당하는 문서 객체를 선택한다.
+			nchild: 부모 기준
+			*/
+	
+	$(document).ready(function(){
+		$('li:even').css('background', 'violet');
+		$('li:eq(1)').css('background', 'lightgreen');
+		$('li:eq(3)').css('background', 'lightblue');
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li>0</li>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<ul>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!--
+	1.A E - A요소에 포함되어 있는 요소 중 E요소를 선택한다.(후손요소)
+	2.A>E - A요소의 바로 아래에 포함되어 있는 E요소를 선택한다.(자식요소)
+	3.A+E - A요소의 다음으로 나오는 E요소를 선택한다.(형제요소)
+-->
+<script>
+	$(document).ready(function(){
+		//$('div>ul:first-child').css('color','red');
+		$('ul:nth-child(1)>li').css('color', 'red');
+		//$('div>ul:first-child>li')
+	})
+</script>
+
+</head>
+<body>
+	<div>
+		<ul>
+			<li>Cat</li>
+			<li>Cow</li>
+			<li>Dog</li>
+		</ul>
+	</div>
+	<div>
+		<p>아래에는 적용하지 마세요</p>
+		<ul>
+			<li>Cat</li>
+			<li>Cow</li>
+			<li>Dog</li>
+		</ul>
+	</div>
+</body>
+</html>
