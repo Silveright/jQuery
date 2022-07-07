@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body *{
+	display: block;
+	border: 2px solid lightgrey;
+	color: lightgrey;
+	padding: 5px;
+	margin: 15px;
+}
+</style>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+
+	$(document).ready(function(){
+		//선택한 요소의 다음형제를 찾는다..
+		$('h2').next().css({
+			"color":"red",
+			"border" : '2px solid red'
+		})
+	});
+</script>
+</head>
+<body class="siblings">body (great-great-grandparent)
+  <div>div (parent)
+	<p>p</p>
+    <span>span</span>
+	<h2>나</h2>
+	<h3>h3</h3>
+	<h4>h4</h4>
+	<h5>h5</h5>
+	<p>p</p>
+  </div>
+</body>
+
+
+</html>

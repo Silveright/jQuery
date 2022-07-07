@@ -18,7 +18,7 @@
 		-each() 메서드는 다음과 같이 두 가지 형태로 하용한다.
 			1)$(selector).each(function(index,item){})
 				첫번째 매개변수 - index(사용된 배열의 index)
-				두번째 매개변수 - item(indext에 해당하는 요소)
+				두번째 매개변수 - item(index에 해당하는 요소)
 			
 			2)$.each(object,function(index,item){})
 			
@@ -35,18 +35,6 @@
 				alert(output)
 			},5000)
 		});
-		  /* 
-		  //안된거...
-		  $(document).ready(function(){
-			setTimeout(function(){
-				var output='';
-				$('input:checkbox:checked').each(function(index,item){
-						output += $(this).val();
-					}
-						alert(output)
-				});
-			},5000)
-	});  */
 	
 		
 </script>

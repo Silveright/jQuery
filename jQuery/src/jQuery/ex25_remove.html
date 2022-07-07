@@ -4,20 +4,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="../js/jquery-3.6.0.js"></script>
-<!-- 태그 선택자 이용 예제
--->
+<!-- remove 문서객체 제거 -->
 <script>
-	
+
 	$(document).ready(function(){
-		$('h1').css('color','orange');
+			$('div>div').first().remove();//div의 자식 중 첫 번째 문서 객체 제거
 	});
 </script>
-
 </head>
 <body>
-	<h1>나는 오렌지색</h1>
-	<p>나는 검정색</p>
-	<h1>나는 오렌지색</h1>
-	<p>나는 검정색</p>
+	<div>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+	</div>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 문서객체 이동
+ $(A).after(B): B를 A의 다음 형제 노드로 추가 -->
+<script>
+	$(document).ready(function(){
+		var h1 ='<h1>화</h1>'
+		var h2 ='<h1>수</h1>'
+		var h3 ='<h1>월</h1>'
+		var h4 ='<h1>목</h1>'
+		
+		//div 태그의 마지막 자식으로 추가
+		$('div').append(h1,h2);
+		//div 태그의 맨 처음 자식으로 추가 
+		$('div').prepend(h3);
+		//div 태그의 바로 다음 형제 노드로 추가한다.
+		$('div').after(h4);
+	});
+</script>
+</head>
+<body>
+	<div>
+	내 뒤에 붙거라
+	</div>
+
+</body>
+</html>

@@ -4,20 +4,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="../js/jquery-3.6.0.js"></script>
-<!-- 태그 선택자 이용 예제
--->
 <script>
-	
 	$(document).ready(function(){
-		$('h1').css('color','orange');
+		 alert($('div').eq(0).text());//div 엘리먼트 중 인덱스 0번째 요소의 텍스트 노드 값을 가져온다.
 	});
 </script>
-
 </head>
 <body>
-	<h1>나는 오렌지색</h1>
-	<p>나는 검정색</p>
-	<h1>나는 오렌지색</h1>
-	<p>나는 검정색</p>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
 </body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<style>
+	    caption { font-size: 20px;
+				  font-weight: bold;
+				  color:green;
+		    	 }
+		table { 
+				border-collapse: collapse;
+				width: 50%; 
+				margin:0 auto; 
+				text-align:center;
+				}
+		tr{height: 50px; border-bottom:1px solid gray; }
+		tbody tr:hover{background:lightgray}
+</style>
+<!-- 문서객체 이동
+ $(A).append(B): B를 A의 마지막 자식으로 추가 -->
+<script>
+	//clone() 복제한다.
+	$(document).ready(function(){
+		$('tbody').append($('tbody>tr:first').clone());
+	});
+</script>
+</head>
+<body>
+	<table>
+		<caption>append - 추가</caption>
+		<thead>
+			<tr>
+				<td>번호</td>
+				<td>이름</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>홍길동</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>이순신</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>손오공</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>저팔계</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>사오정</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

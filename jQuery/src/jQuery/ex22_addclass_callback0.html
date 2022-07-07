@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{width:100px; height:100px}
+	.box0{background:orange}
+	.box1{background:yellow}
+	.box2{background:pink}
+
+</style>
+<!-- addClass(function (index) {})메서드의 콜백함수 
+		each와 같이 각각 객체의 index를 얻어올 수 있음-->
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+	$(document).ready(function(){
+		$('div').addClass(function(index){
+					return 'box' +index;
+		});
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

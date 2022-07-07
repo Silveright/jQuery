@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--
+	find()메서드 :특정 태그를 선택합니다.
+	$.parseXML()메서드 :문자열을 XML 문서 객체로 변경
+	text()메서드: 태그 사이의 글자를 가져온다
+-->
+<style>
+	    caption { font-size: 20px;
+				  font-weight: bold;
+				  color:green;
+		    	 }
+		table { 
+				border-collapse: collapse;
+				width: 50%; 
+				margin:0 auto; 
+				text-align:center;
+				}
+		tr{height: 50px; border-bottom:1px solid gray; }
+		tbody tr:hover{background:lightgray}
+		h1{color:red; text-align:center}
+		
+</style>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+	//변수 선언
+	var xml='';
+	xml += '<friends>';
+	xml += '	<friend>';
+	xml += '		<name>오바마</name>';
+	xml += '		<language>영어</language>'
+	xml += '	</friend>'	
+	xml += '	<friend>';
+	xml += '		<name>하니</name>';
+	xml += '		<language>중국어</language>'
+	xml += '	</friend>'	
+	xml += '	<friend>';
+	xml += '		<name>세종대왕</name>';
+	xml += '		<language>한국어</language>'
+	xml += '	</friend>'	
+	xml += '</friends>';
+	//데이터의 의미들을 표현할 수 있게됨
+	
+	$(document).ready(function(){
+		var xmlDoc = $.parseXML(xml);
+		
+		var sname = prompt('친구 이름을 입력하세요');
+		var output ='<h1>친구가 명단에 없습니다.</h1>';
+		var i=0;	
+		$(xmlDoc).find('friend').each(function(index){
+			if($(this).find("name").text()==sname){
+				 output = '<table>'
+				 output += "<caption> 검색어: "+ sname +"</caption>";
+				 output += '<thead><tr><th>이름</th>'
+				 output += '<th>언어</th></tr></thead><tbody>'
+				 output += '<tr>'
+				 output += '<td>'+$(this).find("name").text()+'</td>'
+				 output += '<td>'+$(this).find("language").text()+'</td>'
+				 output += '</tr>'
+				 output += '</tbody></table>'
+				return false;
+			}
+			console.log(i++);//return x:0,1,2 return:0,1
+		});
+			$('body').html(output);
+			//document.body.innerHTML = output;
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

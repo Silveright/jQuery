@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- text()메서드 : 문서 객체 내부의 글자와 관련된 기능을 수행한다.
+	형식) 
+	1. $(selector).text(); - 선택자의 텍스트 노드의 값을 가져온다.
+	2. $(selector).text(value); - 선택자의 텍스트 노드의 값을 변경
+	3. $(selector).text(function(index,text){});
+		두개의 매개변수 사용
+-->
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+	$(document).ready(function(){
+		//div 모든 태그의 텍스트 노드 값이 변경된다.
+		 $('div').text('내일은 금요일');
+	});
+</script>
+</head>
+<body>
+	<div>Div-0</div>
+	<div>Div-1</div>
+	<div>Div-2</div>
+</body>
+</html>

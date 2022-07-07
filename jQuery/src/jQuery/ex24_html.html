@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+/* html()메서드에서 사용된 두번째 매개변수 html은 index위치에 해당하는 요소의 내용이다. */
+	$(document).ready(function(){
+			$('h1').html(function(index, html){
+				return "*"+html+index+"*";
+			})
+	});
+</script>
+</head>
+<body>
+	<h1>월요일</h1>
+	<h1>화요일</h1>
+	<h1>수요일</h1>
+</body>
+</html>

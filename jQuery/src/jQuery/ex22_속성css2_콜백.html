@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- css()메서드 : 스타일과 관련된 모든 기능을 수행
+		두개의 매개변수 사용
+-->
+<style>
+	div{width:100px; height:100px}
+	.red{background: red}
+	.yellow{background: yellow}
+	.orange{background: orange}
+
+</style>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+	$(document).ready(function(){
+		var message ='';
+		$('div').css('background-color', function(index, style){
+											message += index+ "번째 background-color 속성값은 "
+											+ style + "\n"
+		})
+		console.log(message);
+	});
+</script>
+</head>
+<body>
+	<div class=red></div>
+	<div class=yellow></div>
+	<div class=orange></div>
+</body>
+</html>
