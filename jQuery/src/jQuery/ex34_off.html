@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	이벤트 연결 제거
+	off(): 이벤트를 제거한다.
+		 -->
+<meta charset="UTF-8">
+<style>
+.reverse{background:black;
+		color: white;}
+div{margin:1em}
+</style>
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+/* 
+	hover()메서드 :mouseenter, mouseleave 이벤트 동시 연결
+	형식) $(selector).hover(function(event){},
+							function(event){});
+	
+	*/
+
+		$(document).ready(function(){
+			//이벤트 연결
+			var count=0;
+			$('div').click(function(){
+				//this:이벤트 발생 객체
+				$(this).html('<mark>이벤트가 발생했습니다.</mark>'+count++);	
+				//이벤트 제거
+				//<mark>이벤트가 발생했습니다.</mark>로 바뀐곳은 클릭해도 이벤트 발생하지 않음
+				$(this).off();
+				
+			
+			});//click			
+		});
+		
+</script>
+</head>
+<body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

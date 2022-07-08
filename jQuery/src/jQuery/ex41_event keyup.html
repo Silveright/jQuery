@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+h3{
+	width:100px; height:50px; 
+	background: skyblue;
+	line-height:50px;
+}
+</style>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+		$(document).ready(function(){
+			$('textarea').keyup(function(){
+				var a = $(this).val().length;
+				var remain = 150-a; 
+				$('h3').css({'width':'10em',
+							'text-align':'center'})
+				$('h3').html("남은 글자수 : "+remain);
+				
+			})
+		});
+</script>
+</head>
+<body>
+<div>
+	<p>지금 내 생각을 150자로 작성하세요</p>
+	<h3>최대 150자</h3>
+	<textarea cols='70' rows='5' maxLength='150'></textarea>
+</div>
+</body>
+</html>

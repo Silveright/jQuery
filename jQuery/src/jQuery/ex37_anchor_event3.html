@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	trigger(): 이벤트를 강제로 발생시킨다.
+		형식: trigger(eventname)
+		 -->
+<meta charset="UTF-8">
+<style>
+	*{
+		margin:5px; padding:5px;
+		border: 3px solid black
+	}
+</style>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+		
+		$(document).ready(function(){
+			$('a').click(function(event){
+				$(this).css('background-color','blue');
+				return false;
+				//event.preventDefault(),event.stopPropagation()
+				//두가지 메서드를 jQuery에서는 return false로 적용한다.
+			})
+			$('div').click(function(event){
+				$(this).css('background-color','orange');
+			})
+						
+		});
+</script>
+</head>
+<body>
+	<div>
+		<a href="ex36_trigger5.html">트리거 예제</a> div태그
+	</div>
+</body>
+</html>

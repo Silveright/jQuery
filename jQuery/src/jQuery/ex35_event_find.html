@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	이벤트 연결 제거
+	off(): 이벤트를 제거한다.
+		 -->
+<meta charset="UTF-8">
+<style>
+*{margin:0px; padding:0px}
+div{border: 3px solid black;
+	margin: 5px; padding:3px;
+	border-radius:10px}
+</style>
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+		$(document).ready(function(){
+			//이벤트 연결
+			$('div').on('click', function(){
+				$(this).html(function (index, html){
+					var tag = $(this).find('h1').html();
+					var tag2 = $(this).find('p').html();
+					return alert(tag+"\n"+tag2);
+				})
+			})	
+		});
+</script>
+</head>
+<body>
+	<div>
+		<h1>Header 1</h1>
+		<p>Paragraph1</p>
+	</div>
+	<div>
+		<h1>Header 2</h1>
+		<p>Paragraph2</p>
+	</div>
+	<div>
+		<h1>Header 3</h1>
+		<p>Paragraph3</p>
+	</div>
+	
+</body>
+</html>

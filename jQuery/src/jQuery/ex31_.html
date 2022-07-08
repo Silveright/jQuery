@@ -21,8 +21,21 @@
 <script>
 	 $(document).ready(function(){
 		var a = prompt("추가할 이름을 입력하세요")
-		var num = $('td:eq(-2)').text();
-		$('tbody').append("<tr><td>"+(Number(num)+1)+"</td><td>"+a+"</td></tr>");
+		if($.trim(name)){
+			var num = $('td:eq(-2)').text();
+			$('tbody').append("<tr><td>"+(Number(num)+1)+"</td><td>"+a+"</td></tr>");
+			//tbody의 마지막 tr내의 첫번째 td를 선택후 요소의 내용을 가져온다
+			/* var no= Number($('tbody>tr:last>td:first').text());
+			var no = Number($('tbody:tr:last-child>td:first-child').text());
+			var no = Number($('tbody:tr:last>td:eq(0)').text());
+			var no = Number($('tbody>tr>td:eq(-2)').text());
+			var no = Number($('tbody>tr>last>td').eq(0).text())
+			
+			tbody에 추가할 <tr> 엘리먼트 작성
+			var output ='<tr><td>'+(no+1)+"</td>";
+			var output += "<td>"+a+"</td></tr>";
+			$('tbody').append(output);*/
+		}
 	});
 </script>
 </head>

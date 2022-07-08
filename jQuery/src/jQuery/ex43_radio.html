@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+</style>
+<!-- type 속성이 checkbox와 radio인 input태그의 상태를 변경하는 이벤트는 change이다. -->
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+		$(document).ready(function(){
+			$('input:radio').change(function(event){
+				alert($(this).val())
+			})
+		
+		});
+</script>
+</head>
+<body>
+		<label>
+			<input type ="radio" name='hoho' value ="1">사과
+		</label>
+		<label>
+			<input type ="radio" name='hoho' value ="2">배
+		</label>
+		<label>
+			<input type ="radio" name='hoho' value ="3">복숭아
+		</label>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- jQuery로 이벤트를 연결하는 가장 기본적인 방법은 on()메서드를 사용하는 것
+		형식) $(selector).on(eventName, function(event){})
+										event:이벤트 관련 정보를 가진 객체(생략가능)
+		만약 eventName이 'click'인 경우 click()도 사용가능
+		$(selector).click(function(){})
+		 -->
+<meta charset="UTF-8">
+<style>
+.reverse{background:black;
+		color: white;}
+div{margin:1em}
+</style>
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+/* 
+	hover()메서드 :mouseenter, mouseleave 이벤트 동시 연결
+	형식) $(selector).hover(function(event){},
+							function(event){});
+	
+	*/
+
+		$(document).ready(function(){
+			//이벤트 연결
+			$('div').hover(function(){
+							$(this).addClass('reverse');//mouseenter
+							},
+							function(){
+								$(this).removeClass('reverse');//mouseleave
+								}				
+								);//hover			
+
+		});
+		
+</script>
+</head>
+<body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>
