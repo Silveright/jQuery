@@ -7,6 +7,7 @@ h3{
 	width:100px; height:50px; 
 	background: skyblue;
 	line-height:50px;
+	text-align: center;
 }
 </style>
 
@@ -16,8 +17,7 @@ h3{
 			$('textarea').keyup(function(){
 				var a = $(this).val().length;
 				var remain = 150-a; 
-				$('h3').css({'width':'10em',
-							'text-align':'center'})
+				$('h3').css('width','10em')
 				$('h3').html("남은 글자수 : "+remain);
 				
 			})

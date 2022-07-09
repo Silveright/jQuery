@@ -10,7 +10,8 @@
 <script>
 		$(document).ready(function(){
 			$('#all-check').change(function(){
-				console.log($(this).is(":checked"));
+				console.log($(this).is(":checked"));//is()메서드: 문서 객체의 특성을 판별한다.
+										//예) is('.orange')는 orange 클래스 속성이 문서 객체에 있는지 판별한다.
 				$('#check-item>input:checkbox').prop('checked',$(this).is(':checked'))
 			})
 		

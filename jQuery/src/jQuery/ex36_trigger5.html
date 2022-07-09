@@ -57,7 +57,9 @@
 			})
 			
 			$('#end').click(function(){
-				$('#start').attr('disabled',false).val('트리거 시작');
+				$('#start').attr('disabled',false);
+				$('#start').val('트리거 시작');
+				//$('#start').attr('disabled',false).val('트리거 시작');
 				$(this).attr('disabled',true)
 				clearInterval(myInterval);
 			})

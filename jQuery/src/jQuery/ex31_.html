@@ -20,7 +20,7 @@
 </style>
 <script>
 	 $(document).ready(function(){
-		var a = prompt("추가할 이름을 입력하세요")
+		var name = prompt("추가할 이름을 입력하세요")
 		if($.trim(name)){
 			var num = $('td:eq(-2)').text();
 			$('tbody').append("<tr><td>"+(Number(num)+1)+"</td><td>"+a+"</td></tr>");

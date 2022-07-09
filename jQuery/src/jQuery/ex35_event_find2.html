@@ -17,7 +17,9 @@ div{border: 3px solid black;
 <script>
 		$(document).ready(function(){
 			//이벤트 연결
-			$('div').click(function(){
+			$('div').click(function(event){
+				console.log( event.currentTarget);
+				console.log( event.target);
 				var tag = $(this).find('h1').text();
 				var tag2 = $(this).find('p').text();
 				 alert(tag+"\n"+tag2);
