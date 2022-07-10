@@ -1,13 +1,15 @@
 	$(document).ready(function(){
-		
+		var clicked=0;
+		var oldVal='';
 		$('#myform').submit(function(){
-			//var count =0;
 			var id=$.trim($('#id').val());
 			if(id ==''){
 				alert('ID를 입력하세요');
 				$('#id').focus();
 				return false;
 			}
+			
+			//$('#id').next().trigger('click');
 			
 			var pass=$.trim($('#pass').val());
 			if(pass ==''){
@@ -90,10 +92,11 @@
 				$('#intro').focus();
 				return false;
 			}
-/*
-			if(count!=0){
+
+			if(clicked==0){
+				alert('ID 중복검사를 실행하세요')
 				return false;
-			}*/
+			}
 		})
 		
 		
@@ -107,16 +110,29 @@
 				pattern = /^[A-Z][A-Za-z_0-9]{3,}$/;
 				if (pattern.test(id)) {
 					var ref = "idcheck.html?id=" + id;
-					window.open(ref, '', 'width=300, height=250')
+					window.open(ref, '', 'width=300, height=250');
+					clicked++;
 		
 				} else {
 					alert("첫글자는 대문자이고 두번째부터는 대소문자, 숫자, _로 총 4개 이상이어야 합니다.")
 					id = '';
 					$('#id').focus();
+					return false;
 				}
 			}
 		})
 		
+		$("#id").on("propertychange change keyup paste input", function() {
+			    var currentVal = $(this).val();
+			    console.log(currentVal)
+			    if(currentVal == oldVal) {
+			        return;
+			    }
+			 
+			    oldVal = currentVal;
+			    return clicked=0;
+			});
+
 		$('#jumin1').keyup(function(){
 			var jumin1 =$.trim($('#jumin1').val());
 			
@@ -154,11 +170,11 @@
 		
 		$('select').change(function(){
 			if($(this).val()==''){
-				$('#domain').readOnly=false;
+				$('#domain').removeAttr("readonly");
 				$('#domain').val('');
 				$('#domain').focus();
 			}else{
-				$('#domain').readOnly=true;
+				$('#domain').attr("readonly",true); 
 				$('#domain').val($(this).val());
 			}
 		})
